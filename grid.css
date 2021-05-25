@@ -1,0 +1,91 @@
+html {
+    font-family: arial, Helvetica, sans-serif;
+    font-size: 10px;
+    background: white;
+    height:100%;
+}
+
+img{
+    max-width: 100px;
+    max-height:100px;
+    float: center;
+    margin: 20px;
+}
+
+
+
+body {
+    height: 100%;
+    width: 100%;
+
+    font-size: 1.6rem;
+}
+#holygrail-container{
+    display: grid;
+    grid: 'header header header' 72px
+    'nav main aside' 1fr
+    'footer footer footer' 72px;
+    / 162px 1fr 162px;
+    height:100%;
+    min-width: 400px;
+    min-height: 270px;
+    background: white;
+}
+
+header, nav, section, aside, footer {
+    padding: 20px 15px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+header, footer {
+    grid-column: span 3;
+    display: grid;
+    align-items:center
+}
+
+h1 {
+    align-content: center;
+    margin: 10px;
+}
+
+p {
+    font-size: 30px;
+    padding: 30px;
+
+}
+
+
+
+
+header {
+    grid-area: header;
+}
+nav {
+    grid-area: nav;
+}
+section {
+    grid-area: main;
+}
+aside{
+    grid-area: aside;
+}
+footer {
+    grid-area: footer;
+}
+
+@media screen and (max-width: 700px) {
+    #holygrail-container {
+        display: grid;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "header"
+        "nav" "section" "aside" "footer";
+    }
+    ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 20px;
+
+
+}
+
